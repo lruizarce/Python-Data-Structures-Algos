@@ -1,6 +1,10 @@
 class LinkedList:
     def __init__(self, value):
-        pass
+        new_node = Node(value)
+        self.head = new_node
+        self.tail = new_node
+        self.legth = 1
+        
     def append(self, value):
         pass
     def pop(self):
@@ -11,3 +15,9 @@ class LinkedList:
         pass
     def remove(self, index):
         pass
+    
+class Node:
+    def __init__(self, value) :
+        self.value = value
+        self.next = None
+    
