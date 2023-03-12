@@ -59,7 +59,18 @@ class LinkedList:
             self.head = new_node
             self.length +=1
         return True  
-    
+    def pop_first(self):
+        # Edge case
+        if self.length ==0:
+            return None
+        else:
+            temp = self.head
+            # move head pointer
+            self.head.next = self.head
+            # disconnect old head node
+            temp.next = None
+            self.length -=1
+        return temp
     def insert(self, index, value):
         pass
     def remove(self, index):
