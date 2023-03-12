@@ -2,7 +2,7 @@
 
 This repo will go over Data Structures and Algorithms in Python
 
-- Linked Lists
+- Linked Lists [a link](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main/LinkedList.py)
 - Doubly Linked Lists
 - Stacks & Queues
 - Trees
