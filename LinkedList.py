@@ -63,13 +63,16 @@ class LinkedList:
         # Edge case
         if self.length ==0:
             return None
-        else:
-            temp = self.head
-            # move head pointer
-            self.head.next = self.head
-            # disconnect old head node
-            temp.next = None
-            self.length -=1
+        # Temp pointer
+        temp = self.head
+        # move head pointer
+        self.head = self.head.next
+        # disconnect old head node
+        temp.next = None
+        self.length -=1
+        # Edge case w/ 1 item on list
+        if self.length ==0:
+            self.tail = None   
         return temp
     def insert(self, index, value):
         pass
