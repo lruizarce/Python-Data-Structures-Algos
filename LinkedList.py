@@ -74,6 +74,25 @@ class LinkedList:
         if self.length ==0:
             self.tail = None   
         return temp
+    def get(self, index):
+        # check for valid index
+        if self.length > index or index < 0:
+            return None
+        temp = self.head
+        for _ in range(index):
+            # move pointer to next node
+            temp = temp.next
+        return temp
+    def set_value(self, index, value):
+        # gets the value at index
+        temp = self.get(index)
+        # if temp is not None
+        if temp:
+            temp.value = value
+            return True
+        return False
+        
+            
     def insert(self, index, value):
         pass
     def remove(self, index):
