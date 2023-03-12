@@ -9,5 +9,4 @@ class Cookie:
 cookie_one = Cookie('green')
 cookie_two = Cookie('blue')
 print('Cookie one is', cookie_one.get_color())
-
 print('Cookie two is', cookie_two.get_color())
