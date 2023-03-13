@@ -6,7 +6,7 @@ This repo will go over Data Structures and Algorithms in Python
 - [Doubly Linked Lists](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main/DoublyLinkedList.py)
 - [Queues](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main/Queue.py)
 - [Stacks](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main/Stack.py)
-- [Trees](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main/Tree.py))
+- [Trees](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main/Tree.py)
 - [Hash Tables](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main)
 - [Graphs](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main)
 - [Recursion](https://github.com/lruizarce/Python-Data-Structures-Algos/blob/main)
