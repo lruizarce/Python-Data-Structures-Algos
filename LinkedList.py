@@ -132,7 +132,22 @@ class LinkedList:
         temp.next = None
         self.length -=1
         return temp
-        
+    
+    def reverse(self):
+        # points to head
+        temp = self.head
+        # makes head points to tail
+        self.head = self.tail
+        # tail points to head
+        # (r)->temp->(l)
+        self.tail = temp
+        l = None
+        r = temp.next
+        for _ in range(self.length):
+            r = temp.next
+            temp.next = l
+            l = temp
+            temp = r
         
     # prints each value in the LinkedList
     def print_list(self):
