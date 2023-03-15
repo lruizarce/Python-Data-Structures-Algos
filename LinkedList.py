@@ -94,7 +94,27 @@ class LinkedList:
         
             
     def insert(self, index, value):
-        pass
+        # add value at the beginning
+        if index <0 or index > self.length:
+            return False
+        if index ==0:
+            return self.preprend(value)
+        # add value at the end
+        if index == self.length:
+            return self.append(value)
+        new_node = Node(value)
+        #points to the value before the index
+        temp=self.get(index-1)
+        # new node points to value before index and
+        # makes it point to the index we want
+        new_node.next = temp.next
+        # inserts the value to the correct index
+        temp.next = new_node
+        self.length +=1
+        return True
+            
+            
+            
     def remove(self, index):
         pass
     # prints each value in the LinkedList
@@ -104,8 +124,4 @@ class LinkedList:
             print(temp.value)
             temp = temp.next
 
-    
-myll = LinkedList(2)
-myll.append(3)
-myll.prepend(1)
-myll.print_list()
+
