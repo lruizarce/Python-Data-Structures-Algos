@@ -113,10 +113,27 @@ class LinkedList:
         self.length +=1
         return True
             
-            
-            
     def remove(self, index):
-        pass
+        if index < 0 or index >=self.length:
+            return None
+        # @ the beginning
+        if index ==0:
+            return self.pop_first()
+        # @ the end
+        if index == self.length-1:
+            return self.pop()
+        # points at previous index
+        prev = self.get(index-1)
+        # points to index we want to pop
+        temp = prev.next
+        # connect LL
+        prev.next = temp.next
+        # disconnects popped index
+        temp.next = None
+        self.length -=1
+        return temp
+        
+        
     # prints each value in the LinkedList
     def print_list(self):
         temp = self.head
