@@ -139,7 +139,7 @@ class LinkedList:
         # makes head points to tail
         self.head = self.tail
         # tail points to head
-        # (r)->temp->(l)
+        # (r)->[temp(head)]->(l)
         self.tail = temp
         l = None
         r = temp.next
