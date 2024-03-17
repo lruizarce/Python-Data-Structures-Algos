@@ -46,3 +46,32 @@ class ArrayStack:
             raise Empty("Empty Stack")
         # O(1)
         return self._data.pop()
+
+
+def is_matched(expr):
+    """
+    Checks if the given expression has matching opening and closing brackets.
+    
+    Args:
+        expr (str): The expression to be checked.
+        
+    Returns:
+        bool: True if the expression has matching brackets, False otherwise.
+    """
+    lefty = "({["  # Opening brackets
+    righty = "]})"  # Closing brackets
+    S = ArrayStack()  # Create a new stack
+    for c in expr:  # Iterate through each character in the expression
+        if c in lefty:  # If the character is an opening bracket
+            S.push(c)  # Push it onto the stack
+        elif c in righty:  # If the character is a closing bracket
+            if S.is_empty():  # If the stack is empty, there is no matching opening bracket
+                return False
+            if righty.index(c) != lefty.index(S.pop()):  # If the closing bracket doesn't match the last opening bracket
+                return False
+    return True  # If all brackets match, return True
+
+
+expression = "({[()]})"
+result = is_matched(expression)
+print(result)
