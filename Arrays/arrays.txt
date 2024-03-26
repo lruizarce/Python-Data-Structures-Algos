@@ -1,0 +1,31 @@
+Big O common array operations
+
+1. Access
+    - Time & Space complexity is: O(1)
+    - arr = [1,2,3,4], arr[3] = 4 which we can access with a basic operation
+2. Set
+    - Time & Space complexity is: O(1)
+    - This is the same as access since we are doing a basic operation. 
+3. Traverse/Search
+    - Time Complexity: O(n) because we need to traverse the whole array
+    - Space Complexity: O(1): not using additional space only traversing 
+4. Copy
+    - Time & Space Complexity: O(n)
+    - When copying we need to traverse the array and new slots for the space are needed.
+5. Insert
+    - Static array: fixed size, next memory slot might not be empty. Amortized O(1)
+    - Dynamic array: Allows O(1) insertion at the end and OS allocates 2x times as much memory as needed. 
+    a. At beginning
+        - O(n): because we don't know if the memory slot is free we need to copy the array
+    b. At end
+        - O(n): Dynamic array: O(1). Static array: O(n)
+    c. Somewhere in between
+        - O(n) because we need to make a copy of the array. 
+6. Remove
+    a. at the beginning
+        - We need to shift and reindex the array
+        - O(n)
+    b. at the end
+        - O(1)
+    c. somewhere in between
+        - O(n) because we need to shift the elements
