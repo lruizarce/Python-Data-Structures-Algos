@@ -1,0 +1,11 @@
+What is the need for Complexity Analysis?
+    a. Which approach is better?
+        - Which approx uses less time and less memory
+    b. Why care about identifying which approach is better?
+        - Huge amount of data which means a significant change in performance when thinking about the optimal solution. 
+    c. What does better mean?
+        - faster and uses less memory
+What is Time Complexity Analysis?
+    a. Measure time on different machines with different hardware. 
+    b. Count the number of simple operations the computer has to do.
+    c. How runtime grows as input size grows.
