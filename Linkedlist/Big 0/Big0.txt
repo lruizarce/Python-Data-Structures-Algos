@@ -8,4 +8,9 @@ What is the need for Complexity Analysis?
 What is Time Complexity Analysis?
     a. Measure time on different machines with different hardware. 
     b. Count the number of simple operations the computer has to do.
-    c. How runtime grows as input size grows.
+    c. How runtime grows as the input size grows.
+Asymptotic Analysis
+    a. As N increases we want to know the trend of N we can use a graph.
+    b. What is asymptotic Analysis
+        - F(n) = n + 3 and n =1,000,000 we can say the time complexity of that algorithmn is O(n). As n --> inf the 3 becomes insignificant. 
+    c. 
