@@ -31,9 +31,20 @@ Common Complexities
     - O(n^2): [1,2,3] --> (1,1), (1,2)......(3,3)
     - O(2^n): Fibonacci
     - O(n!): 
+
 Space Complexity
     - Extra space consumed by the algorithm
     - O(1): the space does not scale as size increases
     - How much auxiliary memory needed to run the algorithm
 
+Techniques to Simplify Big O expressions?
+    - a. Drop the constant: O(25*n^2)---> O(n^2)
+    - b. Drop insignificant terms as n increases
+    - c. Different input parameters: Ex. O(n^3 + m) if the input parameter, we cannot drop m.
+
+Logarithms
+    - log n ---> log_2 n: log16 = 4 ... 2^4=16
+    - log_8 =? 2^? = 8 so we have log_8= 3
+    - We have an algorithm that cuts the input in half at every step we can say we have an algorithm that is log n. 
+    - Another way to think about it: If we double the input we only perform one additional operation. 
 
