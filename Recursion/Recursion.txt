@@ -1,0 +1,98 @@
+Recursion
+1. What is recursion?
+    - A function calling, itself until the base condition/terminating condition.
+    - You need a base condition or else you'll be in an infinite loop.
+    - If no base condition you'll get a stack overflow error because we don't have unlimited memory.
+    
+2. When to use recursion?
+    - You need to solve a problem. Can divide it into smaller sub-problems. 1. Solve these, and use these solutions to construct a solution to the original problem. 
+    - Ex. 5! which tells use 4! and 3! ..etc.
+    - Think about the base case and the recursive case.
+
+3. Recursive leap of faith
+    a. Tells us how to use recursion
+    b. Steps for recursion
+        1. Understand the problem
+            - Ex. print 321123, given n and print n, n-1, ..., n
+        2. Identify subproblems
+            - print 2112
+        3. Trust/faith
+            - You have to trust this recursive call will correctly solve a smaller version of your problem.
+            - You don't try to mentally simulate or "unroll" the recursion;
+            - Instead, you assume that if your function works for simpler cases it will work for more complex ones. 
+        4. Link 1 & 2
+        5. Base condition
+            - for 0, return None
+    c. Pseudocode
+        def seq(n)
+        {    if n = 0: Return: Base case
+            print n
+            seq(n-1): Recursive case
+            print n
+        }
+
+4. Visualization: Recursion tree
+    - Pseudocode
+        function (n)
+        if n is equal to 1 -> return 1
+        return function(n-1)xn
+        function(5)
+        f(5)->f(4)->f(3)->f(2)->f(1)
+    b. Recursion call stack
+    __________
+        f(1)
+    __________
+        f(2)    
+    _________
+        f(3)
+    __________
+        f(4)
+    __________
+        f(5)
+    __________
+    c. Takes O(n) space
+
+5. Recursion vs Iteration
+    - Things done recursively can also be done iteratively.
+    - Does not use recursive call stack space [better space complexity]
+    - Recursion has an ascending phase(calling phase) and descending phase(returning phase)
+    - Iteration only has an ascending 
+    - Recursion has better readability easy to write( esp complex questions)
+
+6. Base condition
+    - Tells us when to stop recursively calling itself and start returning. 
+    - Think of the last valid input
+    - Think of the first invalid input
+
+7. Recurrence Relation
+    - Expresses the solution of a problem as a function of the solution to smaller instances of the same problem. 
+
+8. Solving Recursion questions
+    - If you can draw the recursion tree then you can easily solve any recursion question.
+    - Ex
+    f(n) = f(n-1) + f(n-2)
+    f(0)= 0
+    f(1)= 1
+    0,1,2
+    0,1,1, 2
+    n -> 0,1,2,3,4
+    f(3) -> f(2)->f(1)->f(0) return
+
+9. 0 to n and n to 0
+    - def 0toN(10)
+        if n = 1: return 0
+        return n + otoN(n-1)
+10. Recusion is the parent of the following patterns:
+    - Backtracking
+    - Dynamic programming
+    - Greedy algorithms
+        - Optimize the next step using recursion
+    - Divide & conquer
+        - Divide the problem into subproblems
+    - Must MASTER this topic!
+11. complexity Analysis of REcursive solutions
+    - Time -> [# of nodes] x [work done per node]
+    - (LeafNodes x work done) + (Other Nodes x work done) -> time complexity
+    - Space complexity
+        - use the depth to calculate it
+        - 
